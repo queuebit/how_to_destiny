@@ -24,7 +24,7 @@
 var AlexaSkill = require('./AlexaSkill'),
     recipes = require('./recipes');
 
-var APP_ID = undefined; //replace with 'amzn1.echo-sdk-ams.app.[your-unique-value-here]';
+var APP_ID = 'amzn1.echo-sdk-ams.app.605ca609-9609-42a3-ace2-65d6628ef29e'; //replace with 'amzn1.echo-sdk-ams.app.[your-unique-value-here]';
 
 /**
  * MinecraftHelper is a child of AlexaSkill.
@@ -41,7 +41,7 @@ MinecraftHelper.prototype = Object.create(AlexaSkill.prototype);
 MinecraftHelper.prototype.constructor = MinecraftHelper;
 
 MinecraftHelper.prototype.eventHandlers.onLaunch = function (launchRequest, session, response) {
-    var speechText = "Welcome to the Minecraft Helper. You can ask a question like, what's the recipe for a chest? ... Now, what can I help you with.";
+    var speechText = "Welcome to How To Destiny. You can ask a question like, how do I get to the lighthouse? ... Now, what can I help you with.";
     // If the user either does not reply to the welcome message or says something that is not
     // understood, they will be prompted again with this text.
     var repromptText = "For instructions on what you can say, please say help me.";
@@ -86,18 +86,18 @@ MinecraftHelper.prototype.intentHandlers = {
     },
 
     "AMAZON.StopIntent": function (intent, session, response) {
-        var speechOutput = "Goodbye";
+        var speechOutput = "Thanks for learning How To Destiny. Let us help you how to next time.";
         response.tell(speechOutput);
     },
 
     "AMAZON.CancelIntent": function (intent, session, response) {
-        var speechOutput = "Goodbye";
+        var speechOutput = "Thanks for learning How To Destiny. Let us help you how to next time.";
         response.tell(speechOutput);
     },
 
     "AMAZON.HelpIntent": function (intent, session, response) {
-        var speechText = "You can ask questions about minecraft such as, what's the recipe for a chest, or, you can say exit... Now, what can I help you with?";
-        var repromptText = "You can say things like, what's the recipe for a chest, or you can say exit... Now, what can I help you with?";
+        var speechText = "You can ask questions about destiny such as, where can I find some spinmetal? or, you can say exit... Now, what can I help you with?";
+        var repromptText = "You can say things like, where can I find some spinmetal?, or you can say exit... Now, what can I help you with?";
         var speechOutput = {
             speech: speechText,
             type: AlexaSkill.speechOutputType.PLAIN_TEXT

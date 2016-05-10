@@ -1,0 +1,15 @@
+{
+  "name": "how_to_destiny_alexa",
+  "description": "HowTo Destiny spoof for Amazon Echo / Alexa",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": "~4.2.0",
+    "npm": "~2.14.0"
+  },
+  "scripts": {
+    "zip": "zip how_to_destiny.zip index.js recipes.js AlexaSkill.js"
+  }
+}
